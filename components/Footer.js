@@ -31,7 +31,7 @@ function Footer() {
         <p>Centre d'aide</p>
         <p>Options d'annulation</p>
         <p>Service d'aide aux voisins</p>
-        <p>Confiance, sécurité</p>
+        <p>Confiancee et sécurité</p>
       </div>
     </div>
   )
