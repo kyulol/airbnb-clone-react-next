@@ -12,7 +12,7 @@ const progressBar = new ProgressBar({
 
 Router.events.on('routeChangeStart', progressBar.start);
 Router.events.on('routeChangeComplete', progressBar.finish);
-Router.events.on('routeChangeError'; progressBar.finish)
+Router.events.on('routeChangeError', progressBar.finish);
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
