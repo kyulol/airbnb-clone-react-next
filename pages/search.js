@@ -2,6 +2,7 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import { useRouter } from "next/dist/client/router"
 import {format} from "date-fns";
+import Map from "../components/Map";
 import InfoCard from "../components/InfoCard";
 
 function Search({searchResults}) {
@@ -12,8 +13,6 @@ function Search({searchResults}) {
   const formattedStartDate = format(new Date(startDate), "dd MMMM yy");
   const formattedEndDate = format(new Date(endDate), "dd MMMM yy");
   const range = `${formattedStartDate} au ${formattedEndDate}`;
-
-  console.log(searchResults);
 
   return (
     <div className="h-min-screen">
@@ -46,6 +45,9 @@ function Search({searchResults}) {
           </div>
           
 
+        </section>
+        <section className="inline-flex min-w-[600px] max-h-screen">
+          <Map searchResults={searchResults} />
         </section>
 
       </main>
