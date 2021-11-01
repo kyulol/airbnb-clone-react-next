@@ -34,8 +34,8 @@ function Map({searchResults}) {
         <Marker
           longitude={result.long}
           latitude={result.lat}
-          // offsetLeft={-20}
-          // offsetTop={-10}
+          offsetLeft={0}
+          offsetTop={0}
         >
           <p 
           role="img"
@@ -45,15 +45,19 @@ function Map({searchResults}) {
         </Marker>
 
         {selectedLocation.long === result.long ? (
-          <Popup
-            onClose={() =>setSelectedLocation({})}
-            closeOnClick={true}
-            latitude={result.lat}
-            longitude={result.long}
-          >
-            {result.title}
-          </Popup>
-        ) : (false)}
+            <Popup
+                onClose={() => setSelectedLocation({})}
+                closeOnClick={true}
+                latitude={result.lat}
+                longitude={result.long}
+            >
+                <div>
+                    {result.title}
+                </div>
+            </Popup>
+        ) : (
+            false
+        )}
 
       </div>
     ))}
